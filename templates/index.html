@@ -21,6 +21,7 @@
                 <button class="nav-link" data-section="skills">Skills</button>
                 <button class="nav-link" data-section="experience">Experience</button>
                 <button class="nav-link" data-section="activities">Activities</button>
+                <button class="nav-link" data-section="gallery">Gallery</button>
                 <button class="nav-link" data-section="contact">Contact</button>
             </div>
 
@@ -43,7 +44,7 @@
                 </p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary animate-pulse-glow" data-section="projects">View My Work</button>
-                    <a href="../Akshat_Agarwal_26_07_25.pdf" download="Akshat_Agarwal_26_07_25.pdf" class="btn btn-primary animate-pulse-glow">Download Resume</a>
+                    <a href="{{ url_for('static', filename='Akshat_Agarwal_26_07_25.pdf') }}" download="Akshat_Agarwal_26_07_25.pdf" target="#blank" class="btn btn-primary animate-pulse-glow">Download Resume</a>
                     <button class="btn btn-outline" data-section="contact">Get In Touch</button>
                 </div>
             </div>
@@ -124,8 +125,8 @@
                                 <h3 class="overlay-title">Cancer Detection & Awareness Mobile Application</h3>
                                 <p class="overlay-description">A mobile app for lung cancer detection and awareness. Integrates a deep learning model, chatbot support, and dynamic health news. Users can also find nearby cancer care centers with ease.</p>
                                 <div class="overlay-buttons">
-                                    <a href="https://drive.google.com/drive/folders/11M7x1-o2un0W8UtFPSmgTde_n8jXi6r1?usp=sharing" class="btn btn-primary btn-sm">Live APK</a>
-                                    <a href="https://github.com/akshat281204/CancerDetectionApp" class="btn btn-outline btn-sm">GitHub</a>
+                                    <a href="https://drive.google.com/drive/folders/11M7x1-o2un0W8UtFPSmgTde_n8jXi6r1?usp=sharing" target="#blank" class="btn btn-primary btn-sm">Live APK</a>
+                                    <a href="https://github.com/akshat281204/CancerDetectionApp" target="#blank" class="btn btn-outline btn-sm">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -139,12 +140,12 @@
                                 <h3 class="project-title">Cancer Detection & Awareness Mobile Application</h3>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/akshat281204/CancerDetectionApp" class="project-link" title="GitHub">
+                                <a href="https://github.com/akshat281204/CancerDetectionApp" target="#blank" class="project-link" title="GitHub">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                 </a>
-                                <a href="https://drive.google.com/drive/folders/11M7x1-o2un0W8UtFPSmgTde_n8jXi6r1?usp=sharing" class="project-link" title="Live APK">
+                                <a href="https://drive.google.com/drive/folders/11M7x1-o2un0W8UtFPSmgTde_n8jXi6r1?usp=sharing" target="#blank" class="project-link" title="Live APK">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                         <polyline points="15,3 21,3 21,9"/>
@@ -174,8 +175,8 @@
                                 <h3 class="overlay-title">NovaFlex Fitness - Full Stack Website</h3>
                                 <p class="overlay-description">A one-stop gym website bringing fitness to your fingertips. From buying supplements and equipment to enrolling in online classes and virtual workouts, it covers all your needs. Users can also explore nearby fitness centers with ease.</p>
                                 <div class="overlay-buttons">
-                                    <a href="https://nova-flex-fitness.vercel.app/" class="btn btn-primary btn-sm">Live Demo</a>
-                                    <a href="https://github.com/akshat281204/NovaFlex-Fitness" class="btn btn-outline btn-sm">GitHub</a>
+                                    <a href="https://nova-flex-fitness.vercel.app/" target="#blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                    <a href="https://github.com/akshat281204/NovaFlex-Fitness" target="#blank" class="btn btn-outline btn-sm">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -189,12 +190,12 @@
                                 <h3 class="project-title">NovaFlex Fitness - Full Stack Website</h3>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/akshat281204/NovaFlex-Fitness" class="project-link" title="GitHub">
+                                <a href="https://github.com/akshat281204/NovaFlex-Fitness" target="#blank" class="project-link" title="GitHub">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                 </a>
-                                <a href="https://nova-flex-fitness.vercel.app/" class="project-link" title="Live Demo">
+                                <a href="https://nova-flex-fitness.vercel.app/" target="#blank" class="project-link" title="Live Demo">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                         <polyline points="15,3 21,3 21,9"/>
@@ -222,7 +223,7 @@
                                 <h3 class="overlay-title">Multi-Agent Research Assistant</h3>
                                 <p class="overlay-description">An autonomous multi-agent system that generates structured research summaries using LLMs. Built with CrewAI, LangChain, and Ollama, it retrieves sources via SerpAPI and arXiv and outputs organized Markdown and PDF reports.</p>
                                 <div class="overlay-buttons">
-                                    <a href="https://github.com/akshat281204/multi-agent-research-assistant" class="btn btn-outline btn-sm">GitHub</a>
+                                    <a href="https://github.com/akshat281204/multi-agent-research-assistant" target="#blank" class="btn btn-outline btn-sm">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -236,7 +237,7 @@
                                 <h3 class="project-title">Multi-Agent Research Assistant</h3>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/akshat281204/multi-agent-research-assistant" class="project-link" title="GitHub">
+                                <a href="https://github.com/akshat281204/multi-agent-research-assistant" target="#blank" class="project-link" title="GitHub">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
@@ -263,8 +264,8 @@
                                 <h3 class="overlay-title">Smart Hydroponics Dashboard</h3>
                                 <p class="overlay-description">A smart dashboard for monitoring an indoor hydroponics farming system. It tracks key environmental parameters in real time and integrates ML and DL models to assess plant health. Designed to make farming more efficient and intelligent.</p>
                                 <div class="overlay-buttons">
-                                    <a href="https://hydroponics-dashboard.onrender.com/" class="btn btn-primary btn-sm">Live Demo</a>
-                                    <a href="https://github.com/akshat281204/hydroponics-dashboard" class="btn btn-outline btn-sm">GitHub</a>
+                                    <a href="https://hydroponics-dashboard.onrender.com/" target="#blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                    <a href="https://github.com/akshat281204/hydroponics-dashboard" target="#blank" class="btn btn-outline btn-sm">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -278,12 +279,12 @@
                                 <h3 class="project-title">Smart Hydroponics Dashboard</h3>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/akshat281204/hydroponics-dashboard" class="project-link" title="GitHub">
+                                <a href="https://github.com/akshat281204/hydroponics-dashboard" target="#blank" class="project-link" title="GitHub">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                 </a>
-                                <a href="https://hydroponics-dashboard.onrender.com/" class="project-link" title="Live Demo">
+                                <a href="https://hydroponics-dashboard.onrender.com/" target="#blank" class="project-link" title="Live Demo">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                         <polyline points="15,3 21,3 21,9"/>
@@ -308,7 +309,7 @@
 
             <!-- Added view more projects button -->
             <div class="projects-footer fade-in-up">
-                <a href="https://github.com/akshat281204" class="btn btn-outline">View All Projects on GitHub</a>
+                <a href="https://github.com/akshat281204" target="#blank" class="btn btn-outline">View All Projects on GitHub</a>
             </div>
         </div>
     </section>
@@ -324,36 +325,56 @@
             </div>
 
             <div class="scroller fade-in-up" data-speed="slow">
-                <div class="scroller__inner">
-                    <div class="skill-logo-item">
-                        <i class="devicon-flask-original"></i>
-                        <span>Flask</span>
-                    </div>
-                    <div class="skill-logo-item">
-                        <i class="devicon-python-plain"></i>
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-logo-item">
-                        <i class="devicon-javascript-plain"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-logo-item">
-                        <i class="devicon-java-plain"></i>
-                        <span>Java</span>
-                    </div>
-                    <div class="skill-logo-item">
-                        <i class="devicon-firebase-plain"></i>
-                        <span>Firebase</span>
-                    </div>
-                    <div class="skill-logo-item">
-                        <i class="devicon-mongodb-plain"></i>
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="skill-logo-item">
-                        <i class="devicon-github-original"></i>
-                        <span>GitHub</span>
-                    </div>
+            <div class="scroller__inner">
+                <div class="skill-logo-item">
+                <i class="devicon-flask-original"></i>
+                <span>Flask</span>
                 </div>
+                <div class="skill-logo-item">
+                <i class="devicon-python-plain"></i>
+                <span>Python</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-javascript-plain"></i>
+                <span>JavaScript</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-java-plain"></i>
+                <span>Java</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-firebase-plain"></i>
+                <span>Firebase</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-mongodb-plain"></i>
+                <span>MongoDB</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-github-original"></i>
+                <span>GitHub</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-react-original-wordmark"></i>
+                <span>React</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-docker-plain-wordmark"></i>
+                <span>Docker</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-postgresql-plain-wordmark"></i>
+                <span>PostgreSQL</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-nodejs-plain-wordmark"></i>
+                <span>Node.js</span>
+                </div>
+                <div class="skill-logo-item">
+                <i class="devicon-tensorflow-original-wordmark"></i>
+                <span>TensorFlow</span>
+                </div>
+            </div>
             </div>
 
             <div class="section-header fade-in-up" style="margin-top: 5rem;">
@@ -545,6 +566,47 @@
     </div>
     </section>
 
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+            <h2 class="section-title">Photo Gallery</h2>
+            <p class="section-subtitle">
+                A glimpse into my college activities and experiences
+            </p>
+            </div>
+
+            <!-- Infinite Auto-Scrolling Gallery -->
+            <div class="scroller fade-in-up" data-speed="slow" data-direction="right">
+            <div class="scroller__inner">
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi1.jpg') }}" alt="College Event 1" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi2.jpg') }}" alt="College Event 2" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi3.jpg') }}" alt="College Event 3" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi4.jpg') }}" alt="College Event 4" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi5.jpg') }}" alt="College Event 5" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi6.jpg') }}" alt="College Event 6" class="gallery-image">
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        </div>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -585,10 +647,10 @@
                     <div class="social-links">
                         <h4 class="social-title">Find me online</h4>
                         <div class="social-buttons">
-                            <a href="https://github.com/akshat281204" class="btn btn-outline btn-sm">GitHub</a>
-                            <a href="https://www.linkedin.com/in/akshat-agarwal-92a50524b" class="btn btn-outline btn-sm">LinkedIn</a>
-                            <a href="https://leetcode.com/u/Akshat_281204/" class="btn btn-outline btn-sm">LeetCode</a>
-                            <a href="https://www.instagram.com/akshat_281204/" class="btn btn-outline btn-sm">Instagram</a>
+                            <a href="https://github.com/akshat281204" target="#blank" class="btn btn-outline btn-sm">GitHub</a>
+                            <a href="https://www.linkedin.com/in/akshat-agarwal-92a50524b" target="#blank" class="btn btn-outline btn-sm">LinkedIn</a>
+                            <a href="https://leetcode.com/u/Akshat_281204/" target="#blank" class="btn btn-outline btn-sm">LeetCode</a>
+                            <a href="https://www.instagram.com/akshat_281204/" target="#blank" class="btn btn-outline btn-sm">Instagram</a>
                         </div>
                     </div>
                 </div>
