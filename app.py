@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv() # Load environment variables from .env file
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 
 # Flask-Mail configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'

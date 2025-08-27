@@ -176,23 +176,30 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
+  padding: 0.9rem 2rem; /* Increased padding for a more prominent oval */
+  border-radius: 9999px; /* More oval/pill shape */
   font-family: var(--font-sans);
   font-weight: 500;
   text-decoration: none;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative; /* For glow/shine effects */
+  overflow: hidden; /* To contain internal gradients/shadows */
+  z-index: 1; /* Ensure it's above other elements if needed */
 }
 
 .btn-primary {
   background: var(--primary);
   color: var(--primary-foreground);
+  /* Adding a subtle radial gradient for a shiny effect */
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.2) 0%, transparent 70%), var(--primary);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); /* Initial subtle glow */
 }
 
 .btn-primary:hover {
-  background: #7c3aed;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.3) 0%, transparent 70%), #7c3aed; /* Darker primary on hover */
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.7); /* More intense glow on hover */
 }
 
 .btn-outline {
@@ -244,7 +251,6 @@ body {
   font-weight: 500;
 }
 
-/* This is the FIX for the tech stack gap issue */
 .tech-badge {
   display: inline-flex;
   align-items: center;
@@ -256,7 +262,7 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  margin: 0.25rem; /* Replaces the gap property */
+  margin: 0.25rem;
 }
 
 .tech-badge:hover {
@@ -296,6 +302,8 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .hero-container {
@@ -543,11 +551,10 @@ body {
   line-height: 1.6;
 }
 
-/* This is the FIX for the tech stack gap issue */
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  margin: -0.25rem; /* Counteract badge margin for alignment */
+  margin: -0.25rem;
 }
 
 .projects-footer {
@@ -664,7 +671,7 @@ body {
 }
 
 .activity-card .card {
-  flex-grow: 1; /* This makes the card fill the container */
+  flex-grow: 1;
 }
 
 .activity-title {
@@ -797,8 +804,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); }
+  0%, 100% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.5), 0 0 10px rgba(255, 255, 255, 0.3) inset; } /* More intense glow with inner white glow */
+  50% { box-shadow: 0 0 50px rgba(139, 92, 246, 0.8), 0 0 20px rgba(255, 255, 255, 0.5) inset; } /* Even more intense glow */
 }
 
 @keyframes gradient-shift {
@@ -884,70 +891,6 @@ body {
 }
 
 /* ==========================================================================
-   Custom Notification Styles
-   ========================================================================== */
-#notification-container {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.notification {
-  background-color: var(--card);
-  color: var(--foreground);
-  padding: 1rem 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  min-width: 250px;
-  max-width: 350px;
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-}
-
-.notification.hide {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.notification.success {
-  border-left: 5px solid #22c55e; /* Green for success */
-}
-
-.notification.error {
-  border-left: 5px solid #ef4444; /* Red for error */
-}
-
-.notification p {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-.notification .close-btn {
-  background: none;
-  border: none;
-  color: var(--muted-foreground);
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius);
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-.notification .close-btn:hover {
-  color: var(--foreground);
-  background-color: var(--muted);
-}
-
-/* ==========================================================================
    Responsive Design
    ========================================================================== */
 @media (min-width: 768px) {
@@ -985,9 +928,6 @@ body {
   body {
     cursor: auto;
   }
-  .form-row {
-    grid-template-columns: 1fr;
-  }
   .project-header, .experience-header {
     flex-direction: column;
     align-items: flex-start;
@@ -1001,5 +941,57 @@ body {
   }
   .nav {
     padding: 0.5rem;
+  }
+
+  /* === NEW MOBILE IMPROVEMENTS === */
+
+  /* Reduce overall section spacing */
+  .hero-section, .about-section, .projects-section, .skills-section, .experience-section, .activities-section, .contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Adjust hero section elements */
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .avatar {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  /* Adjust general section titles */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Make cards and forms more compact */
+  .card-header, .card-content {
+    padding: 1.25rem;
+  }
+  .project-title {
+    font-size: 1.1rem;
+  }
+  .project-description {
+    font-size: 0.9rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust skills scroller for smaller screens */
+  .scroller__inner {
+    gap: 2rem;
+  }
+  .skill-logo-item i {
+    font-size: 50px;
+  }
+
+  .activities-grid, .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
