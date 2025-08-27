@@ -1,6 +1,6 @@
 # Akshat Agarwal - Personal Portfolio Website
 
-![Hero Section Screenshot](https://raw.githubusercontent.com/akshat281204/portfolio-website/main/static/images/axat.png) <!-- Placeholder, replace with actual screenshot -->
+![Hero Section Screenshot](https://raw.githubusercontent.com/akshat281204/portfolio-website/main/static/images/axat.jpg) <!-- Placeholder, replace with actual screenshot -->
 
 A modern, responsive, and interactive personal portfolio website showcasing Akshat Agarwal's skills, projects, experience, and activities. Built with Python Flask for a lightweight backend and a dynamic frontend using HTML, CSS, and JavaScript. This portfolio features a user-friendly dark/light theme toggle, smooth scroll animations, a functional contact form, and an engaging custom cursor, designed to provide an immersive browsing experience.
 
