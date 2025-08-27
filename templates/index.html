@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshat Agarwal - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="nav-links">
+                <button class="nav-link" data-section="home">Home</button>
+                <button class="nav-link" data-section="about">About</button>
+                <button class="nav-link" data-section="projects">Projects</button>
+                <button class="nav-link" data-section="skills">Skills</button>
+                <button class="nav-link" data-section="experience">Experience</button>
+                <button class="nav-link" data-section="activities">Activities</button>
+                <button class="nav-link" data-section="contact">Contact</button>
+            </div>
+
+            <button id="theme-toggle" class="theme-toggle animate-pulse-glow">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="particles"></div>
+        <div class="hero-container">
+            <div class="hero-content fade-in-up">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Akshat Agarwal</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Final-year CSE (Data Science) undergraduate at BMSCE, passionate about AI, ML, and full-stack development. I love solving complex problems and building impactful tech solutions that create real-world value.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary animate-pulse-glow" data-section="projects">View My Work</button>
+                    <button class="btn btn-outline" data-section="contact">Get In Touch</button>
+                    <a href="{{ url_for('static', filename='Akshat_Agarwal_26_07_25.pdf') }}" download="Akshat_Agarwal_26_07_25.pdf" class="btn btn-primary">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image animate-float">
+                <img src="{{ url_for('static', filename='images/axat.jpg') }}" alt="Developer Avatar" class="avatar">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content fade-in-left">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-text">
+                        I’m a final-year Computer Science (Data Science) student at BMSCE with a strong foundation in Data Structures & Algorithms and a passion for building purposeful technology. I enjoy exploring AI, ML, and full-stack development, and I love applying my skills to create impactful real-world solutions.
+                    </p>
+                    <p class="about-text">
+                        As a founding member and Secretary of DSync, I’ve organized events, fostered collaborations, and helped create opportunities for budding tech enthusiasts. I thrive in dynamic environments, enjoy collaborating with diverse teams, and believe in learning by doing.
+                    </p>
+                    <div class="traits">
+                        <span class="badge">Problem Solver</span>
+                        <span class="badge">Team Player</span>
+                        <span class="badge">Quick Learner</span>
+                        <span class="badge">Innovation Driven</span>
+                        <span class="badge">Hard Worker</span>
+                    </div>
+                </div>
+
+                <div class="about-card fade-in-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Quick Facts</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="fact-item">
+                                <span class="fact-label">Location:</span>
+                                <span class="fact-value">Bengaluru, Karnataka</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-label">Experience:</span>
+                                <span class="fact-value">Fresher</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-label">Projects:</span>
+                                <span class="fact-value">10+ Completed</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-label">Availability:</span>
+                                <span class="fact-value available">Open to Work</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Here are some of my recent projects that showcase my skills and passion for development
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Enhanced project cards with better hover effects and status indicators -->
+                <div class="project-card fade-in-up" data-category="web">
+                    <div class="project-image-container">
+                        <img src="{{ url_for('static', filename='images/hope-scan-bg.png') }}" alt="lung-cancer-app" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h3 class="overlay-title">Cancer Detection & Awareness Mobile Application</h3>
+                                <p class="overlay-description">A mobile app for lung cancer detection and awareness. Integrates a deep learning model, chatbot support, and dynamic health news. Users can also find nearby cancer care centers with ease.</p>
+                                <div class="overlay-buttons">
+                                    <a href="https://drive.google.com/drive/folders/11M7x1-o2un0W8UtFPSmgTde_n8jXi6r1?usp=sharing" class="btn btn-primary btn-sm">Live APK</a>
+                                    <a href="https://github.com/akshat281204/CancerDetectionApp" class="btn btn-outline btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-title-section">
+                                <h3 class="project-title">Cancer Detection & Awareness Mobile Application</h3>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/akshat281204/CancerDetectionApp" class="project-link" title="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://drive.google.com/drive/folders/11M7x1-o2un0W8UtFPSmgTde_n8jXi6r1?usp=sharing" class="project-link" title="Live APK">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">A mobile app for lung cancer detection and awareness. Integrates a deep learning model, chatbot support, and dynamic health news. Users can also find nearby cancer care centers with ease.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Deep Learning</span>
+                            <span class="tech-badge">Dialogflow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in-up" data-category="web">
+                    <div class="project-image-container">
+                        <img src="{{ url_for('static', filename='images/novaflex-bg.png') }}" alt="nova-flex-fitness" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h3 class="overlay-title">NovaFlex Fitness - Full Stack Website</h3>
+                                <p class="overlay-description">A one-stop gym website bringing fitness to your fingertips. From buying supplements and equipment to enrolling in online classes and virtual workouts, it covers all your needs. Users can also explore nearby fitness centers with ease.</p>
+                                <div class="overlay-buttons">
+                                    <a href="https://nova-flex-fitness.vercel.app/" class="btn btn-primary btn-sm">Live Demo</a>
+                                    <a href="https://github.com/akshat281204/NovaFlex-Fitness" class="btn btn-outline btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-title-section">
+                                <h3 class="project-title">NovaFlex Fitness - Full Stack Website</h3>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/akshat281204/NovaFlex-Fitness" class="project-link" title="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://nova-flex-fitness.vercel.app/" class="project-link" title="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">A one-stop gym website bringing fitness to your fingertips. From buying supplements and equipment to enrolling in online classes and virtual workouts, it covers all your needs. Users can also explore nearby fitness centers with ease.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">HTML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in-up" data-category="ai">
+                    <div class="project-image-container">
+                        <img src="{{ url_for('static', filename='images/rp-gen-bg.png') }}" alt="multiagent-gen" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h3 class="overlay-title">Multi-Agent Research Assistant</h3>
+                                <p class="overlay-description">An autonomous multi-agent system that generates structured research summaries using LLMs. Built with CrewAI, LangChain, and Ollama, it retrieves sources via SerpAPI and arXiv and outputs organized Markdown and PDF reports.</p>
+                                <div class="overlay-buttons">
+                                    <a href="https://github.com/akshat281204/multi-agent-research-assistant" class="btn btn-outline btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-title-section">
+                                <h3 class="project-title">Multi-Agent Research Assistant</h3>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/akshat281204/multi-agent-research-assistant" class="project-link" title="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">An autonomous multi-agent system that generates structured research summaries using LLMs. Built with CrewAI, LangChain, and Ollama, it retrieves sources via SerpAPI and arXiv and outputs organized Markdown and PDF reports.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">CrewAI</span>
+                            <span class="tech-badge">LangChain</span>
+                            <span class="tech-badge">Ollama</span>
+                            <span class="tech-badge">SerpAPI</span>
+                            <span class="tech-badge">arXiv API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in-up" data-category="web">
+                    <div class="project-image-container">
+                        <img src="{{ url_for('static', filename='images/hyd-db-bg.png') }}" alt="hydroponics-dashboard" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h3 class="overlay-title">Smart Hydroponics Dashboard</h3>
+                                <p class="overlay-description">A smart dashboard for monitoring an indoor hydroponics farming system. It tracks key environmental parameters in real time and integrates ML and DL models to assess plant health. Designed to make farming more efficient and intelligent.</p>
+                                <div class="overlay-buttons">
+                                    <a href="https://hydroponics-dashboard.onrender.com/" class="btn btn-primary btn-sm">Live Demo</a>
+                                    <a href="https://github.com/akshat281204/hydroponics-dashboard" class="btn btn-outline btn-sm">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-title-section">
+                                <h3 class="project-title">Smart Hydroponics Dashboard</h3>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/akshat281204/hydroponics-dashboard" class="project-link" title="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://hydroponics-dashboard.onrender.com/" class="project-link" title="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">A smart dashboard for monitoring an indoor hydroponics farming system. It tracks key environmental parameters in real time and integrates ML and DL models to assess plant health. Designed to make farming more efficient and intelligent.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">HuggingFace</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">HTML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Added view more projects button -->
+            <div class="projects-footer fade-in-up">
+                <a href="https://github.com/akshat281204" class="btn btn-outline">View All Projects on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">
+                    Technologies I work with to bring ideas to life
+                </p>
+            </div>
+
+            <div class="scroller fade-in-up" data-speed="slow">
+                <div class="scroller__inner">
+                    <div class="skill-logo-item">
+                        <i class="devicon-flask-original"></i>
+                        <span>Flask</span>
+                    </div>
+                    <div class="skill-logo-item">
+                        <i class="devicon-python-plain"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-logo-item">
+                        <i class="devicon-javascript-plain"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-logo-item">
+                        <i class="devicon-java-plain"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-logo-item">
+                        <i class="devicon-firebase-plain"></i>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="skill-logo-item">
+                        <i class="devicon-mongodb-plain"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-logo-item">
+                        <i class="devicon-github-original"></i>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header fade-in-up" style="margin-top: 5rem;">
+                <h2 class="section-title" style="font-size: 2rem;">Libraries, Frameworks, Databases & More</h2>
+            </div>
+            <div class="traits fade-in-up" style="justify-content: center;">
+                <span class="badge">Flask</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">NumPy</span>
+                <span class="badge">Matplotlib</span>
+                <span class="badge">FancyImpute</span>
+                <span class="badge">TensorFlow</span>
+                <span class="badge">Keras</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express.js</span>
+                <span class="badge">React.js</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">Neo4j</span>
+                <span class="badge">Firebase</span>
+                <span class="badge">Vercel</span>
+                <span class="badge">Docker</span>
+                <span class="badge">Jenkins</span>
+                <span class="badge">Prometheus</span>
+                <span class="badge">Grafana</span>
+                <span class="badge">GitHub</span>
+                <span class="badge">Data Structures and Algorithms</span>
+                <span class="badge">Operating Systems</span>
+                <span class="badge">Database Management Systems</span>
+                <span class="badge">Computer Networks</span>
+                <span class="badge">Software Engineering</span>
+                <span class="badge">Data Science</span>
+                <span class="badge">Data Analytics</span>
+                <span class="badge">Machine Learning</span>
+                <span class="badge">Deep Learning</span>
+                <span class="badge">Cloud Computing</span>
+                <span class="badge">Robot Process and Automation</span>
+                <span class="badge">Object Oriented Programming</span>
+                <span class="badge">Big Data Analytics</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            <div class="experience-list">
+                <div class="experience-item fade-in-up">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="experience-header">
+                                <div>
+                                    <h3 class="experience-title">SDE Intern</h3>
+                                    <p class="experience-company">Hyperface Technologies</p>
+                                </div>
+                                <span class="status-badge in-progress">Jan 2025 Onwards</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="experience-description">
+                                Upcoming Software Development Engineer Intern focusing on backend development. 
+                                Working primarily with <strong>Spring Boot to design scalable backend systems.
+                            </p>
+                            <div class="achievements">
+                                <h4 class="achievements-title">Key Focus Areas:</h4>
+                                <ul class="achievements-list">
+                                    <li>Backend development with Spring Boot</li>
+                                    <li>Building scalable and efficient APIs</li>
+                                    <li>Contributing to real-world fintech applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section">
+    <div class="container">
+        <div class="section-header fade-in-up">
+        <h2 class="section-title">Co-curricular Activities</h2>
+        <p class="section-subtitle">
+            Beyond academics - my involvement in leadership, innovation, and volunteering
+        </p>
+        </div>
+
+        <div class="activities-grid">
+        <!-- DSync Club -->
+        <div class="activity-card fade-in-up">
+            <div class="card">
+            <div class="card-header">
+                <h3 class="activity-title">Founder</h3>
+                <p class="activity-organization">DSync - BMSCE CSE (Data Science) Club</p>
+                <span class="activity-period">Jan 2024 - Present</span>
+            </div>
+            <div class="card-content">
+                <p class="activity-description">
+                Founded and actively contributed to the DSync - BMSCE CSE (Data Science) Club, 
+                taking part in mentoring, team leadership, public speaking, and organizing club activities to foster a collaborative learning environment in data science.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <!-- IIC -->
+        <div class="activity-card fade-in-up">
+            <div class="card">
+            <div class="card-header">
+                <h3 class="activity-title">Volunteer</h3>
+                <p class="activity-organization">Institution’s Innovation Council (IIC), BMSCE</p>
+                <span class="activity-period">Jan 2024 - Jan 2025</span>
+            </div>
+            <div class="card-content">
+                <p class="activity-description">
+                Assisted in events and initiatives promoting innovation and entrepreneurship.  
+                Contributed with design, graphic design, and creative support.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <!-- ACM Student Chapter -->
+        <div class="activity-card fade-in-up">
+            <div class="card">
+            <div class="card-header">
+                <h3 class="activity-title">Member</h3>
+                <p class="activity-organization">BMSCE ACM Student Chapter</p>
+                <span class="activity-period">Jan 2024 - Jan 2025</span>
+            </div>
+            <div class="card-content">
+                <p class="activity-description">
+                Contributed to chapter activities and workshops.  
+                Skills in design and graphic design.
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Have a project in mind? Let's work together to bring your ideas to life
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info fade-in-left">
+                    <h3 class="contact-title">Let's Connect</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">akshat28122004@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">+91 9871285905</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <p class="contact-label">Location</p>
+                                <p class="contact-value">Bengaluru, Karnataka</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4 class="social-title">Find me online</h4>
+                        <div class="social-buttons">
+                            <a href="https://github.com/akshat281204" class="btn btn-outline btn-sm">GitHub</a>
+                            <a href="https://www.linkedin.com/in/akshat-agarwal-92a50524b" class="btn btn-outline btn-sm">LinkedIn</a>
+                            <a href="https://www.instagram.com/akshat_281204/" class="btn btn-outline btn-sm">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container fade-in-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Send me a message</h3>
+                            <p class="card-description">I'd love to collaborate</p>
+                        </div>
+                        <div class="card-content">
+                            <form class="contact-form" method="POST" action="/api/send_email">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="firstName">First Name</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Akshat" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Agarwal" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="akshat@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="message">Message</label>
+                                    <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-full animate-pulse-glow">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 Akshat Agarwal.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div id="notification-container"></div>
+</body>
+</html>
