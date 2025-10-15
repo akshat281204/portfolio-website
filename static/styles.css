@@ -1057,3 +1057,555 @@ body {
 #gallery {
   scroll-margin-top: 100px;
 }
+/* ==========================================================================
+   Interview Experiences - Collapsible Customization (Revised PC Layout)
+   ========================================================================== */
+
+.interview-card {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.interview-details {
+    list-style: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+/* Style the summary (the clickable, visible header) */
+.interview-summary {
+    cursor: pointer;
+    list-style: none;
+    position: relative; /* Anchor for the absolutely positioned arrow */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    padding-right: 4rem !important; /* IMPORTANT: Create space for the arrow on the right */
+    border-bottom: none;
+}
+
+.interview-summary:hover {
+    background-color: var(--muted);
+}
+
+/* Hide the default triangle marker for the summary */
+.interview-summary::-webkit-details-marker,
+.interview-summary::marker {
+    display: none;
+    content: "";
+}
+
+/* Custom indicator (Arrow) */
+.interview-summary::after {
+    content: "\25BE"; /* Large black down-pointing triangle */
+    font-size: 1.2rem;
+    color: var(--primary);
+    position: absolute;
+    right: 1.5rem; /* Position the arrow in the new padded space */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+/* Rotate the indicator for EXPANDED state */
+.interview-details[open] .interview-summary::after {
+    content: "\25B8";
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Ensure the header content uses the full available space but doesn't overlap the arrow */
+.interview-summary .experience-header {
+    /* Allow header content to use the remaining space */
+    width: 100%; 
+    /* Ensure the timeline badge stays grouped with the company/role details if needed, 
+       but the arrow is now separate via absolute positioning on .interview-summary */
+}
+
+.interview-collapsible-content {
+    border-top: 1px dashed var(--border);
+}
+
+.experience-company {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.interview-role {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    margin-top: 0.25rem;
+}
+
+.timeline-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    background: var(--secondary);
+    color: var(--secondary-foreground);
+    width: fit-content;
+    white-space: nowrap;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    /* Overrides the PC padding */
+    .interview-summary {
+        padding-right: 1.5rem !important; 
+    }
+    .interview-summary .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding-right: 2.5rem;
+    }
+    .interview-summary::after {
+        right: 1rem;
+    }
+}
+
+/* ==========================================================================
+   About Section Education Sub-List Customization (Spacing & Stacking Fix)
+   ========================================================================== */
+
+/* Spacing Fix: Ensure proper separation from the 'Quick Facts' grid above it */
+.education-subheader {
+    margin-top: 3rem; /* Adds clear space below the About grid */
+    margin-bottom: 1.5rem; /* Space above the education list */
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border); /* Visual separator */
+}
+
+.education-sub-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+    text-align: center;
+}
+
+/* PC WIDTH CONSTRAINT (Addresses the "consumes entire screen" issue) */
+@media (min-width: 768px) {
+    /* Apply a max width and center the list to align with the content above */
+    .about-section .experience-list {
+        max-width: 900px; /* Adjust this value if needed */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2.5rem;
+    }
+}
+
+/* VERTICAL STACKING FIX (Forces marks and timeline to stack) */
+.education-details-group {
+    display: flex;
+    flex-direction: column; /* FORCES vertical stacking */
+    align-items: flex-end; /* Align the badges to the right in PC view */
+    gap: 0.5rem;
+}
+
+/* General styling for badges in the Education section */
+.timeline-badge,
+.marks-badge {
+    display: inline-flex;
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+/* Specific styling for the badges */
+.timeline-badge {
+    background: var(--secondary);
+    color: var(--secondary-foreground);
+    border: 1px solid var(--border);
+}
+
+.current-timeline {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.marks-badge {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .education-details-group {
+        align-items: flex-start; /* Align badges to the left on mobile */
+    }
+}
+
+/* Update: Adjusting experience-header for better internal spacing and alignment */
+.experience-header {
+  display: flex;
+  align-items: flex-start; 
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  gap: 1.5rem;
+}
+
+/* Styling for the new logo container and image */
+.education-logo-container {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; 
+    padding: 0.25rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--background);
+}
+
+.education-logo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    object-fit: contain;
+    margin: 0;
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start; 
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  gap: 1.5rem;
+}
+
+/* Styling for the logo container - NOW JUST FOR MARGIN/SPACING */
+.education-logo-container {
+    /* Removed padding, border, and background from the box */
+    padding: 0;
+    border: none;
+    background: transparent;
+    
+    /* Ensure flex properties are maintained */
+    display: flex;
+    align-items: flex-start; /* Align logo to the top */
+    flex-shrink: 0; 
+    margin-top: 0.25rem; /* Slight top margin to align it better with the text block */
+}
+
+.education-logo {
+    /* Logo size remains large */
+    width: 4.5rem;
+    height: 4.5rem;
+    
+    /* Simplified styling for a 'floating' look */
+    border-radius: 0.5rem; 
+    object-fit: contain;
+    margin: 0;
+    padding: 0; /* Ensure the image itself has no internal padding */
+    border: none; /* Remove border from the image */
+    background: transparent; /* Remove background from the image */
+}
+
+/* Text block next to the logo (Institution Name and Degree/Exam) */
+.experience-header > div:nth-child(2) {
+    flex-grow: 1;
+    /* Removed padding-top here as we adjusted the logo container margin instead */
+    padding-top: 0; 
+}
+
+.experience-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.experience-company {
+    font-size: 1.1rem;
+    color: var(--muted-foreground);
+    font-weight: 400;
+}
+
+
+/* Badges Alignment and Stacking */
+.education-details-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+}
+
+/* ==========================================================================
+   About Section Education Sub-List Customization
+   ========================================================================== */
+
+.education-subheader {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.education-sub-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground);
+    text-align: center;
+}
+
+/* PC WIDTH CONSTRAINT */
+@media (min-width: 768px) {
+    .about-section .experience-list {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2.5rem;
+    }
+}
+
+/* General styling for badges in the Education section */
+.timeline-badge,
+.marks-badge {
+    display: inline-flex;
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.timeline-badge {
+    background: var(--secondary);
+    color: var(--secondary-foreground);
+    border: 1px solid var(--border);
+}
+
+.current-timeline {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.marks-badge {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .experience-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 1rem 0;
+    }
+
+    .education-logo-container {
+        margin-bottom: 0.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0.2rem;
+    }
+    .education-logo {
+        width: 3rem;
+        height: 3rem;
+    }
+    .education-details-group {
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================================
+   Co-Curricular Activities Logo and Layout Fixes
+   ========================================================================== */
+
+/* 1. Ensure logo, text, and timeline are aligned in the header */
+.activity-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align all items to the top of the header */
+    padding-top: 1.5rem; /* Ensure top padding matches existing card header */
+    padding-bottom: 1.5rem; /* Ensure bottom padding matches existing card header */
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* 2. Group the Logo and Text together and allow them to take up space */
+.activity-header-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem; /* Spacing between logo and title text */
+    flex-grow: 1; /* Allow this group to take up most of the space */
+}
+
+/* 3. Re-style the period badge for better appearance next to the logo setup */
+.activity-period {
+    /* Base styles from original CSS */
+    background: transparent;
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    width: fit-content;
+    
+    /* Alignment adjustment */
+    flex-shrink: 0; /* Prevents the period from getting squished */
+    margin-top: 0.1rem; /* Adjust to align with the text block */
+}
+
+/* 4. Mobile adjustment for stacking */
+@media (max-width: 768px) {
+    .activity-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .activity-header-content {
+        flex-grow: 0;
+    }
+
+    .activity-period {
+        margin-top: 0;
+    }
+}
+/* Activities Section */
+.activities-section {
+  padding: 5rem 0;
+  background: rgba(var(--card), 0.1);
+}
+
+.activities-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-card .card {
+  flex-grow: 1;
+}
+
+.activity-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.activity-organization {
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.activity-period {
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Co-Curricular Activities - Top-Stacked Logo Layout
+   ========================================================================== */
+
+/* 1. Define Card Header for Stacking and Positioning */
+.activity-card .card-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: none;
+}
+
+/* 2. Logo Block Styling */
+.activity-logo-block {
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+/* 3. Logo Alignment and Size */
+.activity-logo-block .education-logo-container {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.activity-logo-block .education-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    border-radius: 0.5rem;
+    object-fit: contain;
+    margin: 0;
+    border: none;
+    background: transparent;
+}
+
+/* 4. Reposition the Timeline Badge to avoid overflow */
+.activity-period-badge {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.5rem;
+    background: var(--secondary);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.activity-card .card-content {
+    /* Reduce the top padding to tighten the space between the header details and description */
+    padding-top: 0rem; 
+}
+
+/* 5. Mobile Adjustments */
+@media (max-width: 768px) {
+    .activity-card .card-header {
+        padding-bottom: 3rem;
+    }
+    .activity-period-badge {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+.interview-collapsible-content p,
+.interview-collapsible-content li {
+    color: var(--muted-foreground);
+    line-height: 1.7; /* Increased line height slightly for better spacing */
+}
+
+/* ADDED: Add padding below each round list item for clear separation */
+.interview-collapsible-content .achievements-list li {
+    margin-bottom: 1.25rem; /* Adds space after each round */
+}
+
+/* 2. Target Headings and Strong/Bolded words to use the sharpest foreground color (White in dark mode) */
+.interview-collapsible-content .achievements-title,
+.interview-collapsible-content strong {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+/* 3. Ensure the list items headings (e.g., "Round 1 (MCQs)") use the sharp color */
+.achievements-list li strong:first-child {
+    color: var(--foreground);
+    font-weight: 700;
+}

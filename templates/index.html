@@ -20,6 +20,7 @@
                 <button class="nav-link" data-section="projects">Projects</button>
                 <button class="nav-link" data-section="skills">Skills</button>
                 <button class="nav-link" data-section="experience">Experience</button>
+                <button class="nav-link" data-section="interview">Interviews</button>
                 <button class="nav-link" data-section="activities">Activities</button>
                 <button class="nav-link" data-section="gallery">Gallery</button>
                 <button class="nav-link" data-section="contact">Contact</button>
@@ -101,9 +102,80 @@
                         </div>
                     </div>
                 </div>
+        </div>
+        </div> 
+    <div class="education-subheader fade-in-up">
+        <h3 class="education-sub-title">Academic History</h3>
+    </div>
+    
+    <div class="experience-list">
+        
+        <div class="experience-item fade-in-up">
+            <div class="card education-card">
+                <div class="card-header">
+                    <div class="experience-header">
+                        <div class="education-logo-container">
+                            <!-- Placeholder image - Replace the src link with your actual logo URL -->
+                            <img src="{{ url_for('static', filename='images/bmsce.png') }}" alt="Developer Avatar" class="education-logo">
+                        </div>
+                        <div>
+                            <h3 class="experience-title">BMS College of Engineering</h3>
+                            <p class="experience-company">Bachelor of Engineering in CSE(Data Science)</p>
+                        </div>
+                        <div class="education-details-group">
+                            <span class="timeline-badge current-timeline">December 2022 - Present</span>
+                            <span class="marks-badge current-marks">Current CGPA: 9.49/10</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+
+        <div class="experience-item fade-in-up">
+            <div class="card education-card">
+                <div class="card-header">
+                    <div class="experience-header">
+                        <div class="education-logo-container">
+                            <!-- Placeholder image - Replace the src link with your actual logo URL -->
+                            <img src="{{ url_for('static', filename='images/mlzs.png') }}" alt="Developer Avatar" class="education-logo">
+                        </div>
+                        <div>
+                            <h3 class="experience-title">Mount Litera Zee School</h3>
+                            <p class="experience-company">All India Senior School Certificate Examination (12th)</p>
+                        </div>
+                        <div class="education-details-group">
+                            <span class="timeline-badge">April 2021 - March 2022</span>
+                            <span class="marks-badge completed-marks">Percentage: 90.4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-item fade-in-up">
+            <div class="card education-card">
+                <div class="card-header">
+                    <div class="experience-header">
+                        <div class="education-logo-container">
+                            <!-- Placeholder image - Replace the src link with your actual logo URL -->
+                            <img src="{{ url_for('static', filename='images/afgji.jpg') }}" alt="Developer Avatar" class="education-logo">
+                        </div>
+                        <div>
+                            <h3 class="experience-title">Air Force Golden Jubilee Institute</h3>
+                            <p class="experience-company">High School Education (10th)</p>
+                        </div>
+                        <div class="education-details-group">
+                            <span class="timeline-badge">April 2019 - March 2020</span>
+                            <span class="marks-badge completed-marks">Percentage : 88.6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
@@ -419,45 +491,172 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="section-header fade-in-up">
-                <h2 class="section-title">Work Experience</h2>
-            </div>
-            <div class="experience-list">
-                <div class="experience-item fade-in-up">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="experience-header">
-                                <div>
-                                    <h3 class="experience-title">SDE Intern</h3>
-                                    <p class="experience-company">Hyperface Technologies</p>
+<section id="experience" class="experience-section">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">Work Experience</h2>
+        </div>
+        <div class="experience-list">
+            <div class="experience-item fade-in-up">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="experience-header">
+                            <div class="experience-logo-block">
+                                <div class="education-logo-container">
+                                    <img src="{{ url_for('static', filename='images/hf.jpg') }}" alt="Hyperface Logo" class="education-logo experience-logo">
                                 </div>
-                                <span class="status-badge in-progress">Jan 2025 Onwards</span>
                             </div>
+                            <div>
+                                <h3 class="experience-title">SDE Intern</h3>
+                                <p class="experience-company">Hyperface Technologies</p>
+                            </div>
+                            <span class="status-badge in-progress">Jan 2025 Onwards</span>
                         </div>
-                        <div class="card-content">
-                            <p class="experience-description">
-                                Upcoming Software Development Engineer Intern focusing on backend development. 
-                                Working primarily with <strong>Spring Boot to design scalable backend systems.
-                            </p>
-                            <div class="achievements">
-                                <h4 class="achievements-title">Key Focus Areas:</h4>
-                                <ul class="achievements-list">
-                                    <li>Backend development with Spring Boot</li>
-                                    <li>Building scalable and efficient APIs</li>
-                                    <li>Contributing to real-world fintech applications</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="experience-description">
+                            Upcoming Software Development Engineer Intern focusing on backend development. 
+                            Working primarily with <strong>Spring Boot to design scalable backend systems.
+                        </p>
+                        <div class="achievements">
+                            <h4 class="achievements-title">Key Focus Areas:</h4>
+                            <ul class="achievements-list">
+                                <li>Backend development with Spring Boot</li>
+                                <li>Building scalable and efficient APIs</li>
+                                <li>Contributing to real-world fintech applications</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="interview" class="experience-section">
+    <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Interview Experiences</h2>
+            </div>
+            <div class="experience-list">
+                
+                <div class="experience-item fade-in-up">
+        <div class="card interview-card">
+            <details class="interview-details">
+                
+                <summary class="card-header interview-summary">
+                    <div class="experience-header">
+                        <div class="experience-logo-block">
+                            <div class="education-logo-container">
+                                <img src="{{ url_for('static', filename='images/hf.jpg') }}" alt="Hyperface Logo" class="education-logo experience-logo">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="experience-company">Hyperface Technologies</p>
+                            <h3 class="experience-title interview-role">SDE Intern Role</h3> 
+                        </div>
+                        <span class="timeline-badge">8:30 AM to 11:00 PM, 6th August, 2025</span>
+                    </div>
+                </summary>
+
+<div class="card-content interview-collapsible-content">
+    <p class="experience-description">
+        Hyperface was the third company to visit our campus since the placement season started. A total of <strong>500 candidates appeared</strong> for the process, and only <strong>3 (including me) were selected</strong> as interns. The entire process had five rounds and all of them were conducted in a single, grueling day.
+    </p>
+    <p class="experience-description">
+        Honestly, the procedure was very long and tiring—from <strong>8:30 AM to 11:00 PM</strong>—but it gave me a lot of confidence. This was one of the very few procedures that didn’t leave much scope for people to cheat their way in, though some still tried and were eventually caught.
+    </p>
+    
+    <div class="achievements" style="margin-top: 1.5rem;">
+        <h4 class="achievements-title">Round Details:</h4>
+        <ul class="achievements-list">
+            <li>
+                <strong>Round 1 (MCQs):</strong> This had 20 questions. The first 10 were aptitude-based, and the rest were technical, focusing on <strong>core concepts, coding, Devops, and Linux</strong>. 140 candidates were selected for the next round.
+            </li>
+            <li>
+                <strong>Round 2 (DSA):</strong> This was a tense, non-IDE based round. We had 4 sets, each having 2 questions to be done under 30 minutes, and we had to write the code down in Notepad without any internet access. The questions were typical DSA: one based on strings (finding the longest common prefix) and the other based on trees (printing the <strong>right side view of a tree</strong>). 40 candidates were selected after this.
+            </li>
+            <li>
+                <strong>Round 3 (Machine Coding):</strong> This was my first time seeing a machine coding round for an SDE 1 role, but I tried to ignore that and focus. We were given a <strong>banking scenario</strong> with various classes and methods to code within 50 minutes. I chose <strong>Java</strong> since I was most comfortable implementing the necessary OOP concepts with it. 10 candidates made it to the interviews.
+            </li>
+            <li>
+                <strong>Round 4 (Technical Interview 1 - Coding Session):</strong> This felt more like a one-on-one coding session. After a brief introduction and some questions about my projects, the interviewer jumped straight to LeetCode. I had to solve a <strong>Graph question</strong> that required me to return all nodes reachable from node 0 without visiting a restricted node. I made sure to think out loud the entire time, and the interviewer constantly asked for justifications or suggested changes. I managed to solve it in around 20-25 minutes. The whole interview was about an hour long. 5 candidates were selected for the final round.
+            </li>
+            <li>
+                <strong>Round 5 (Technical Interview 2 - Core Concepts):</strong> This was the final round with two people interviewing me. They concentrated more on <strong>DBMS and OOP</strong>, which made sense given it's a fintech company. The initial questions were easy-to-medium, but the scenarios became increasingly complex. They also questioned me about tools I mentioned on my resume like <strong>Jenkins and Neo4j</strong>. Following that, I asked for feedback and how I could improve, which led to a good 10-15 minute discussion. This interview also lasted about an hour.
+            </li>
+        </ul>
+    </div>
+    <p class="experience-description" style="margin-top: 1rem;">
+        <strong>Following this final round, they announced the results, and I was one of the 3 candidates selected! </strong>
+    </p>
+    <!-- <p class="experience-description" style="margin-top: 1rem;">
+        <strong>20 CTC (Tier 1 according to college policy)</strong>
+    </p> -->
+</div>
+            </details>
+        </div>
+    </div>
+            <div class="experience-item fade-in-up">
+    <div class="card interview-card">
+        <details class="interview-details">
+            <summary class="card-header interview-summary">
+                <div class="experience-header">
+                    <div class="experience-logo-block">
+                        <div class="education-logo-container">
+                            <img src="{{ url_for('static', filename='images/mathco.png') }}" alt="MathCo Logo" class="education-logo experience-logo">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="experience-company">MathCo (Earlier as The Math Company)</p>
+                        <h3 class="experience-title interview-role">Trainee Analyst Role</h3> 
+                    </div>
+                    <span class="timeline-badge">3rd September - 15th September, 2025</span>
+                </div>
+            </summary>
+            
+            <div class="card-content interview-collapsible-content">
+                <p class="experience-description">
+                    MathCo was the next company I was eligible for after securing my first offer, due to the college's two-offer policy (one above 6 LPA, one below). The process began with two tests on <strong>3rd September</strong>, and the interviews followed on <strong>15th September</strong>. A total of 600 candidates appeared for the initial test.
+                </p>
+                
+                <div class="achievements" style="margin-top: 1.5rem;">
+                    <h4 class="achievements-title">Round Details:</h4>
+                    <ul class="achievements-list">
+                        <li style="margin-bottom: 1.25rem;">
+                            <strong>Round 1 (Aptitude & Guesstimates):</strong> This test included <strong>aptitude, pseudocode, and guesstimate questions</strong>. The difficulty was easy; if you've covered the topic once, you could answer the questions that were asked. (300 candidates were selected for the next round)
+                        </li>
+                        <li style="margin-bottom: 1.25rem;">
+                            <strong>Round 2 (SpeechX):</strong> This was primarily a <strong>communication test</strong> with situational questions. We were asked to speak regarding a certain situation for 2 minutes and had only one chance. It ended with 30 easy MCQs on communication. (120 candidates were selected for the next round)
+                        </li>
+                        <li style="margin-bottom: 1.25rem;">
+                            <strong>Round 3 (Technical Interview):</strong> This 30-minute interview started with an introduction and a detailed explanation of a confident project. The interviewer asked me to write down some basic <strong>SQL queries</strong>, followed by a scenario-based question on choosing a <strong>tech stack</strong> for a product. Finally, I was asked to write a <strong>Flask API</strong>.
+                        </li>
+                        <li style="margin-bottom: 1.25rem;">
+                            <strong>Round 4 (Case Study):</strong> This round had 30 minutes for 5 questions. It included two easy <strong>DSA questions</strong>, a <strong>graphical question</strong> requiring analysis and outcome prediction, a <strong>probability-based question</strong>, and one <strong>guesstimate question</strong>.
+                        </li>
+                        <li style="margin-bottom: 1.25rem;">
+                            <strong>Round 5 (HR Interview):</strong> This was the final round. I was questioned about my answers from the Case Study round and, crucially, how I was <strong>different from the other candidates</strong> sitting for the process.
+                        </li>
+                    </ul>
+                </div>
+                <p class="experience-description" style="margin-top: 1rem;">
+                    Finally, they announced that <strong>21 candidates were selected</strong>, and I was one of them.
+                </p>
+                <!-- <p><strong>5.5 CTC - First Year</strong></p>
+                <p><strong>8.5 CTC - Second Year</strong></p>
+                <p><strong>12 CTC - Third Year</strong></p>
+                <p><strong>No Bond</strong></p> -->
+            </div>
+        </details>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
 
     <!-- Activities Section -->
-    <section id="activities" class="activities-section">
+<section id="activities" class="activities-section">
     <div class="container">
         <div class="section-header fade-in-up">
         <h2 class="section-title">Co-curricular Activities</h2>
@@ -467,12 +666,18 @@
         </div>
 
         <div class="activities-grid">
-        <!-- DSync Club -->
         <div class="activity-card fade-in-up">
             <div class="card">
             <div class="card-header">
-                <h3 class="activity-title">Founder</h3>
-                <p class="activity-organization">DSync - BMSCE CSE (Data Science) Club</p>
+                <div class="activity-header-content">
+                    <div class="education-logo-container">
+                        <img src="{{ url_for('static', filename='images/dsync.jpeg') }}" alt="DSync Logo" class="education-logo activity-logo">
+                    </div>
+                    <div>
+                        <h3 class="activity-title">Founder</h3>
+                        <p class="activity-organization">DSync - BMSCE CSE (Data Science) Club</p>
+                    </div>
+                </div>
                 <span class="activity-period">Jan 2024 - Present</span>
             </div>
             <div class="card-content">
@@ -487,8 +692,15 @@
         <div class="activity-card fade-in-up">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="activity-title">Department Coordinator and Event Coordinator</h3>
-                    <p class="activity-organization">PhaseShift, College Technical Fest</p>
+                    <div class="activity-header-content">
+                        <div class="education-logo-container">
+                            <img src="{{ url_for('static', filename='images/ps.webp') }}" alt="PhaseShift Logo" class="education-logo activity-logo">
+                        </div>
+                        <div>
+                            <h3 class="activity-title">Department Coordinator and Event Coordinator</h3>
+                            <p class="activity-organization">PhaseShift, College Technical Fest</p>
+                        </div>
+                    </div>
                     <span class="activity-period">Nov. 2023 - Dec. 2024</span>
                 </div>
                 <div class="card-content">
@@ -502,8 +714,15 @@
         <div class="activity-card fade-in-up">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="activity-title">Club Coordinator and Organising Committee Member</h3>
-                    <p class="activity-organization">UTSAV, College Cultural Fest</p>
+                    <div class="activity-header-content">
+                        <div class="education-logo-container">
+                            <img src="{{ url_for('static', filename='images/utsav.png') }}" alt="UTSAV Logo" class="education-logo activity-logo">
+                        </div>
+                        <div>
+                            <h3 class="activity-title">Club Coordinator and Organising Committee Member</h3>
+                            <p class="activity-organization">UTSAV, College Cultural Fest</p>
+                        </div>
+                    </div>
                     <span class="activity-period">May 2023 - May 2024</span>
                 </div>
                 <div class="card-content">
@@ -514,12 +733,18 @@
             </div>
         </div>
 
-        <!-- IIC -->
         <div class="activity-card fade-in-up">
             <div class="card">
             <div class="card-header">
-                <h3 class="activity-title">Volunteer</h3>
-                <p class="activity-organization">Institution’s Innovation Council (IIC), BMSCE</p>
+                <div class="activity-header-content">
+                    <div class="education-logo-container">
+                        <img src="{{ url_for('static', filename='images/iic.webp') }}" alt="IIC Logo" class="education-logo activity-logo">
+                    </div>
+                    <div>
+                        <h3 class="activity-title">Volunteer</h3>
+                        <p class="activity-organization">Institution’s Innovation Council (IIC), BMSCE</p>
+                    </div>
+                </div>
                 <span class="activity-period">Jan 2024 - Jan 2025</span>
             </div>
             <div class="card-content">
@@ -534,8 +759,15 @@
         <div class="activity-card fade-in-up">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="activity-title">Member</h3>
-                    <p class="activity-organization">Rotaract Club of BMSCE</p>
+                    <div class="activity-header-content">
+                        <div class="education-logo-container">
+                            <img src="{{ url_for('static', filename='images/rotaract.png') }}" alt="Rotaract Logo" class="education-logo activity-logo">
+                        </div>
+                        <div>
+                            <h3 class="activity-title">Member</h3>
+                            <p class="activity-organization">Rotaract Club of BMSCE</p>
+                        </div>
+                    </div>
                     <span class="activity-period">Jan 2023 - Jan 2025</span>
                 </div>
                 <div class="card-content">
@@ -546,12 +778,18 @@
             </div>
         </div>
 
-        <!-- ACM Student Chapter -->
         <div class="activity-card fade-in-up">
             <div class="card">
             <div class="card-header">
-                <h3 class="activity-title">Member</h3>
-                <p class="activity-organization">BMSCE ACM Student Chapter</p>
+                <div class="activity-header-content">
+                    <div class="education-logo-container">
+                        <img src="{{ url_for('static', filename='images/acm.png') }}" alt="ACM Logo" class="education-logo activity-logo">
+                    </div>
+                    <div>
+                        <h3 class="activity-title">Member</h3>
+                        <p class="activity-organization">BMSCE ACM Student Chapter</p>
+                    </div>
+                </div>
                 <span class="activity-period">Jan 2024 - Jan 2025</span>
             </div>
             <div class="card-content">
@@ -595,6 +833,15 @@
                 </div>
                 <div class="gallery-item">
                 <img src="{{ url_for('static', filename='images/gi6.jpg') }}" alt="College Event 6" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi7.jpeg') }}" alt="College Event 7" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi8.jpeg') }}" alt="College Event 8" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gi9.jpeg') }}" alt="College Event 9" class="gallery-image">
                 </div>
             </div>
             </div>
