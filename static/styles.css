@@ -1,54 +1,54 @@
 /* ==========================================================================
-   Root Variables and Global Styles
+   Root Variables and Global Styles (Mint Green Theme)
    ========================================================================== */
 :root {
   --background: #ffffff;
-  --foreground: #1f2937;
+  --foreground: #0b1220;
   --card: #f8fafc;
-  --card-foreground: #1f2937;
-  --primary: #8b5cf6;
+  --card-foreground: #0b1220;
+  --primary: #43c59e; /* greenish-mint */
   --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #1f2937;
-  --muted: #f1f5f9;
+  --secondary: #f1f7f5;
+  --secondary-foreground: #0b1220;
+  --muted: #f1f7f5;
   --muted-foreground: #6b7280;
-  --accent: #8b5cf6;
+  --accent: #38b48b;
   --accent-foreground: #ffffff;
-  --border: #e2e8f0;
+  --border: #e2efe8;
   --input: #f8fafc;
-  --ring: rgba(139, 92, 246, 0.3);
+  --ring: rgba(67, 197, 158, 0.28);
   --radius: 0.75rem;
   --font-sans: "DM Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Light Bluish Gradient Colors */
-  --gradient-color-1: #eff6ff;
-  --gradient-color-2: #f5f3ff;
-  --gradient-color-3: #f0f9ff;
-  --gradient-color-4: #faf5ff;
+  /* Light Minty Gradient Colors */
+  --gradient-color-1: #f0fff9;
+  --gradient-color-2: #e8fdf6;
+  --gradient-color-3: #f7fffb;
+  --gradient-color-4: #f8fafc;
 }
 
 .dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --primary: #8b5cf6;
-  --primary-foreground: #ffffff;
-  --secondary: #334155;
-  --secondary-foreground: #f8fafc;
-  --muted: #334155;
+  --background: #071018;
+  --foreground: #e6f6ef;
+  --card: #0f1720;
+  --card-foreground: #e6f6ef;
+  --primary: #43c59e; /* same mint accent in dark mode */
+  --primary-foreground: #0b1220;
+  --secondary: #1e293b;
+  --secondary-foreground: #d7efe6;
+  --muted: #0f1720;
   --muted-foreground: #94a3b8;
-  --accent: #8b5cf6;
-  --accent-foreground: #ffffff;
-  --border: #334155;
-  --input: #1e293b;
+  --accent: #38b48b;
+  --accent-foreground: #e6f6ef;
+  --border: #243237;
+  --input: #0f1720;
 
-  /* Dark Bluish Gradient Colors */
-  --gradient-color-1: #0f172a;
-  --gradient-color-2: #111827;
-  --gradient-color-3: #1e1b4b;
-  --gradient-color-4: #1e293b;
+  /* Dark Minty Gradient Colors */
+  --gradient-color-1: #071018;
+  --gradient-color-2: #08141a;
+  --gradient-color-3: #0f2a24;
+  --gradient-color-4: #0f1720;
 }
 
 * {
@@ -62,7 +62,7 @@ body {
   color: var(--foreground);
   line-height: 1.6;
   cursor: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background 0.3s ease;
   background: linear-gradient(
     270deg,
     var(--gradient-color-1),
@@ -123,7 +123,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 9999px;
   padding: 0.5rem 1rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
 }
 
 .nav-content {
@@ -193,13 +193,15 @@ body {
   background: var(--primary);
   color: var(--primary-foreground);
   /* Adding a subtle radial gradient for a shiny effect */
-  background: radial-gradient(circle at top left, rgba(255,255,255,0.2) 0%, transparent 70%), var(--primary);
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); /* Initial subtle glow */
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.15) 0%, transparent 70%), var(--primary);
+  box-shadow: 0 0 15px rgba(67, 197, 158, 0.35); /* Mint glow */
 }
 
 .btn-primary:hover {
-  background: radial-gradient(circle at top left, rgba(255,255,255,0.3) 0%, transparent 70%), #7c3aed; /* Darker primary on hover */
-  box-shadow: 0 0 25px rgba(139, 92, 246, 0.7); /* More intense glow on hover */
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.25) 0%, transparent 70%), /* slightly brighter */
+    color: var(--primary-foreground);
+  box-shadow: 0 0 25px rgba(67, 197, 158, 0.6); /* stronger mint glow on hover */
+  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -255,9 +257,9 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 0.25rem 0.75rem;
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(67, 197, 158, 0.08);
   color: var(--primary);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(67, 197, 158, 0.18);
   border-radius: 1rem;
   font-size: 0.75rem;
   font-weight: 500;
@@ -345,13 +347,13 @@ body {
   width: 16rem;
   height: 16rem;
   border-radius: 50%;
-  border: 4px solid rgba(139, 92, 246, 0.2);
+  border: 4px solid rgba(67, 197, 158, 0.18);
 }
 
 /* About Section */
 .about-section {
   padding: 5rem 0;
-  background: rgba(var(--card), 0.1);
+  background: rgba(var(--card), 0.06);
 }
 
 .about-grid {
@@ -412,8 +414,8 @@ body {
 
 .project-card:hover {
   transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+  border-color: rgba(67, 197, 158, 0.3);
 }
 
 .project-image-container {
@@ -439,7 +441,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
+  background: linear-gradient(135deg, rgba(7, 17, 16, 0.85), rgba(15, 34, 29, 0.85));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -471,7 +473,7 @@ body {
 }
 
 .overlay-description {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -657,7 +659,7 @@ body {
 /* Activities Section */
 .activities-section {
   padding: 5rem 0;
-  background: rgba(var(--card), 0.1);
+  background: rgba(var(--card), 0.06);
 }
 
 .activities-grid {
@@ -722,7 +724,7 @@ body {
 .contact-icon {
   width: 3rem;
   height: 3rem;
-  background: rgba(var(--primary), 0.1);
+  background: rgba(67, 197, 158, 0.08);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -739,10 +741,21 @@ body {
   margin-bottom: 1rem;
 }
 
+.social-links {
+  padding-top: 1rem;
+}
+
 .social-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
 }
+
+.social-buttons a i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
 
 /* Forms */
 .contact-form {
@@ -787,7 +800,7 @@ body {
 .footer {
   padding: 2rem 0;
   border-top: 1px solid var(--border);
-  background: rgba(var(--card), 0.1);
+  background: rgba(var(--card), 0.06);
 }
 
 .footer-content {
@@ -804,8 +817,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.5), 0 0 10px rgba(255, 255, 255, 0.3) inset; } /* More intense glow with inner white glow */
-  50% { box-shadow: 0 0 50px rgba(139, 92, 246, 0.8), 0 0 20px rgba(255, 255, 255, 0.5) inset; } /* Even more intense glow */
+  0%, 100% { box-shadow: 0 0 25px rgba(67, 197, 158, 0.45), 0 0 10px rgba(255, 255, 255, 0.25) inset; }
+  50% { box-shadow: 0 0 50px rgba(67, 197, 158, 0.75), 0 0 20px rgba(255, 255, 255, 0.45) inset; }
 }
 
 @keyframes gradient-shift {
@@ -842,7 +855,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(-45deg, #8b5cf6, #6366f1, #3b82f6, #8b5cf6);
+  background: linear-gradient(-45deg, #43c59e, #2fae88, #1fa97a, #43c59e);
   background-size: 400% 400%;
   animation: gradient-shift 3s ease infinite;
   -webkit-background-clip: text;
@@ -886,7 +899,7 @@ body {
   position: absolute;
   background: var(--primary);
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.08;
   animation: drift 20s ease-in-out infinite;
 }
 
@@ -1230,9 +1243,9 @@ body {
 }
 
 .marks-badge {
-    background: rgba(34, 197, 94, 0.1);
+    background: rgba(34, 197, 94, 0.08);
     color: #22c55e;
-    border: 1px solid rgba(34, 197, 94, 0.3);
+    border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
 /* Mobile Adjustments */
@@ -1388,9 +1401,9 @@ body {
 }
 
 .marks-badge {
-    background: rgba(34, 197, 94, 0.1);
+    background: rgba(34, 197, 94, 0.08);
     color: #22c55e;
-    border: 1px solid rgba(34, 197, 94, 0.3);
+    border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
 /* Mobile Adjustments */
@@ -1475,7 +1488,7 @@ body {
 /* Activities Section */
 .activities-section {
   padding: 5rem 0;
-  background: rgba(var(--card), 0.1);
+  background: rgba(var(--card), 0.06);
 }
 
 .activities-grid {
@@ -1608,4 +1621,416 @@ body {
 .achievements-list li strong:first-child {
     color: var(--foreground);
     font-weight: 700;
+}
+
+/* ==========================================================
+   🌿 Subtle 3D Mint-Themed Card Depth + Interactive Tilt
+   ========================================================== */
+
+/* --- Base Card Depth --- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 15px rgba(67, 197, 158, 0.08),
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d; /* Enable 3D perspective */
+  will-change: transform;
+}
+
+/* --- Inner Light Overlay --- */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(0,0,0,0.05));
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* --- Hover Lift --- */
+.card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 12px 25px rgba(67, 197, 158, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* --- Press Down Effect --- */
+.card:active {
+  transform: translateY(0px) scale(0.98);
+  box-shadow: 0 3px 8px rgba(67, 197, 158, 0.05);
+}
+
+/* --- Highlighted (Featured) Cards --- */
+.card.featured {
+  box-shadow: 0 10px 25px rgba(67, 197, 158, 0.18),
+              inset 0 1px 0 rgba(255,255,255,0.6);
+  border-color: rgba(67,197,158,0.4);
+}
+
+/* --- Button Depth --- */
+.btn-primary {
+  box-shadow: 0 4px 10px rgba(67, 197, 158, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(67, 197, 158, 0.45);
+}
+
+/* ==========================================================
+   🧠 Parallax Tilt Effect (Optional but Beautiful)
+   ========================================================== */
+.card[data-tilt] {
+  transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+  transition: transform 0.2s ease-out, box-shadow 0.3s ease;
+}
+
+.card[data-tilt]:hover {
+  box-shadow: 0 12px 25px rgba(67, 197, 158, 0.2),
+              inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.card[data-tilt]:active {
+  transform: perspective(800px) rotateX(0deg) rotateY(0deg) scale(0.98);
+}
+
+/* --- Smooth 3D hover tilt interaction --- */
+.card[data-tilt]:hover::before {
+  opacity: 0.1;
+}
+
+/* Add this lightweight JS (optional) for the actual tilt motion */
+
+/* ==========================================================
+   🌿 Refined Mint 3D Card & Button Design
+   ========================================================== */
+
+/* --- Clean Matte Card Base --- */
+.card {
+  background: linear-gradient(145deg, rgba(245, 255, 252, 0.85), rgba(232, 255, 248, 0.9));
+  border: 1px solid rgba(67, 197, 158, 0.25);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(67, 197, 158, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* --- Hover: Depth + Edge Glow --- */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(67, 197, 158, 0.5);
+  box-shadow: 0 15px 35px rgba(67, 197, 158, 0.25),
+              0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Gentle sheen effect --- */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.05), rgba(67, 197, 158, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.card:hover::after {
+  opacity: 1;
+}
+
+/* --- Active press feel --- */
+.card:active {
+  transform: translateY(-3px) scale(0.995);
+  box-shadow: 0 6px 10px rgba(67, 197, 158, 0.15);
+}
+
+/* --- Make sure Project Cards also inherit the same look --- */
+.project-card {
+  background: linear-gradient(145deg, rgba(245, 255, 252, 0.85), rgba(232, 255, 248, 0.9));
+  border: 1px solid rgba(67, 197, 158, 0.25);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(67, 197, 158, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(67, 197, 158, 0.25);
+}
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+/* ==========================================================
+   🧠 Parallax Tilt Effect (Fixed for Projects Too)
+   ========================================================== */
+.card, .project-card {
+  perspective: 1000px;
+}
+.card[data-tilt], .project-card[data-tilt] {
+  transition: transform 0.25s ease-out, box-shadow 0.4s ease;
+}
+.card[data-tilt]:hover, .project-card[data-tilt]:hover {
+  box-shadow: 0 15px 35px rgba(67, 197, 158, 0.25);
+}
+
+/* ==========================================================
+   🌿 Refined Mint Cards — Visible Depth (Light + Dark Mode)
+   ========================================================== */
+
+/* Light mode cards */
+.card,
+.project-card {
+  background: linear-gradient(145deg, #d8f8ef, #b9f0dc); /* minty gradient */
+  border: 1px solid rgba(0, 100, 80, 0.2);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 80, 60, 0.1),
+              0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.3s ease;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Hover: more color and light */
+.card:hover,
+.project-card:hover {
+  background: linear-gradient(145deg, #b9f0dc, #a2ead0);
+  box-shadow: 0 14px 35px rgba(0, 80, 60, 0.25),
+              0 6px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(0, 100, 80, 0.4);
+}
+
+/* Dark mode cards */
+.dark .card,
+.dark .project-card {
+  background: linear-gradient(145deg, #10211d, #0c1815);
+  border: 1px solid rgba(67, 197, 158, 0.3);
+  box-shadow: 0 6px 20px rgba(67, 197, 158, 0.1),
+              0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.dark .card:hover,
+.dark .project-card:hover {
+  background: linear-gradient(145deg, #15352f, #112823);
+  box-shadow: 0 15px 35px rgba(67, 197, 158, 0.25),
+              0 8px 20px rgba(0, 0, 0, 0.5);
+  border-color: rgba(67, 197, 158, 0.5);
+}
+
+/* Refined button hover — maintain text contrast */
+.btn-primary {
+  background: linear-gradient(135deg, #44caa0, #3cb391);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #34a885, #2d8e74);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(67, 197, 158, 0.4);
+}
+
+.about-3d {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, rgba(67,197,158,0.1), transparent 70%);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(67,197,158,0.1);
+}
+
+#aboutModel {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+}
+
+/* ==========================================================
+   🌿 About Section Layout with 3D Model
+   ========================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Left Side */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Right Side (3D Model Container) */
+.about-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, rgba(67, 197, 158, 0.08), transparent 80%);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(67, 197, 158, 0.1);
+  height: 500px;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* slightly thinner right side */
+  align-items: center;
+  gap: 2rem;
+  height: 85vh; /* taller overall section */
+}
+
+.about-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background: radial-gradient(circle at center, rgba(15, 25, 25, 0.9), rgba(5, 10, 10, 0.95));
+  border-radius: 22px;
+  box-shadow:
+    inset 0 0 25px rgba(0, 255, 200, 0.08),
+    0 0 35px rgba(0, 255, 180, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* the actual canvas */
+#aboutModel {
+  width: 100%;
+  height: 100%;
+  max-width: 380px;
+  aspect-ratio: 3 / 4;
+  border-radius: 22px;
+  background: transparent;
+  filter: drop-shadow(0 0 40px rgba(0, 255, 180, 0.2));
+  transition: transform 0.4s ease;
+}
+
+.about-right:hover #aboutModel {
+  transform: scale(1.02);
+}
+
+/* ===== Typing Animation for Name ===== */
+.typewriter {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+#typed-name {
+  color: #3ecf8e; /* your green */
+  padding-right: 2px;
+  animation: blink 0.8s infinite;
+  display: block;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+/* ==========================================================
+   🌐 GitHub 3D Section Layout
+   ========================================================== */
+
+.github-3d-section .section-title {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  z-index: 2;
+  pointer-events: none; /* so clicks go through canvas if needed */
+}
+
+.github-3d-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 0 20px; /* reduce bottom padding */
+  width: 100%;
+  overflow: visible;
+  background: transparent;
+}
+
+#githubModel {
+  position: relative;
+  width: 90%;
+  max-width: 700px;  /* keep it large */
+  height: 500px;
+  margin-bottom: -80px; /* pull up over next section */
+  background: transparent;
+  filter: drop-shadow(0 0 40px rgba(0, 255, 180, 0.3));
+  z-index: 1;
+  transition: transform 0.4s ease; /* smooth hover scaling */
+  cursor: pointer;
+}
+
+#githubModel:hover {
+  transform: scale(1.05); /* slightly enlarge on hover */
+}
+.hero-content {
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+
+    /* 1. Adjust the main layout for a single column */
+    .about-grid {
+        /* Switch from 1fr 1fr to a single column */
+        grid-template-columns: 1fr;
+        /* Reduce the gap for tighter mobile layout */
+        gap: 3rem; 
+    }
+
+    /* 2. Remove fixed heights and simplify the model container */
+    .about-container {
+        /* Ensure it's a single column layout if you use this class */
+        grid-template-columns: 1fr;
+        /* Allow content height to dictate section height */
+        height: auto; 
+    }
+    
+    /* 3. Adjust the 3D Model Container */
+    .about-right {
+        /* Remove the fixed height to prevent excessive scrolling/whitespace */
+        height: 50vh; /* Set a relative height, or use 'auto' */
+        min-height: 400px; /* Ensure a minimum size for the model */
+        /* Change the order to place the model below the text on mobile */
+        order: 2;
+    }
+
+    /* 4. Adjust the Left Content (Text and Facts) */
+    .about-left {
+        /* Ensure the text is at the top (before the model) */
+        order: 1;
+    }
+    
+    /* 5. Ensure the Canvas scales within the new container */
+    #aboutModel {
+        /* Remove max-width so it can fill the container width if needed */
+        max-width: 100%;
+        /* Maintain a reasonable aspect ratio */
+        aspect-ratio: 3 / 4; 
+    }
 }
