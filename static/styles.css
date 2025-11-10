@@ -2034,3 +2034,11 @@ h1 {
         aspect-ratio: 3 / 4; 
     }
 }
+
+.greeting {
+  color: #424449;
+}
+
+.dark .greeting {
+  color: white;
+}
